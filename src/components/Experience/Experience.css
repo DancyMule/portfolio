@@ -1,0 +1,52 @@
+.borderLine {
+    margin-top: 5rem;
+    width: 90vw; 
+    border-color: #c6c6c6;
+    margin-left: calc(-10.5vw);
+}
+
+.ContainerExp {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.Tittle {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ExperienceContainer {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center; /* Alinea verticalmente */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(55, 51, 57);
+    margin: 1rem 0; /* Espaciado entre experiencias */
+    padding: 1rem; /* Espaciado interno */
+}
+
+.ExperienceDetails {
+    flex: 1; /* Ocupa el espacio restante */
+    padding-right: 1rem; /* Espacio entre texto e imagen */
+    color: #fff; /* Cambia el color según tus preferencias */
+}
+
+.ExperienceDetails h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem; /* Ajusta según tu diseño */
+}
+
+.ExperienceDetails h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem; /* Ajusta según tu diseño */
+}
+
+.ExperienceImage {
+    width: 25%; /* Ajusta el tamaño según tu diseño */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

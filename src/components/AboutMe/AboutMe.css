@@ -1,0 +1,61 @@
+.AboutMeSection{
+    display: grid;
+    grid-template-columns: 2;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.NameSection{
+    grid-column: 1/2;
+}
+
+.NameHello{
+    text-align: start;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+    
+}
+
+.NameTitle{
+    text-align: start;
+    font-weight: 500;
+    margin: 0;
+    font-size: 6rem;
+}
+
+.JobTitle{
+    text-align: start;
+    font-weight: 500;
+    padding-top: 1rem;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.AboutMeText{
+    text-align: justify;
+    padding-right: 5rem;
+    font-size: 1.4rem;
+}
+
+.ImgSection{
+    grid-column: 2/2;
+}
+
+.MainPhoto{
+    width: 27rem;
+    height: 27rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.MainPhoto:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+    transform: scale(1.05); /
+}
+
+.borderLine {
+    margin-top: 5rem;
+    width: 90vw; 
+    border-color: #c6c6c6;
+    margin-left: calc(-10.5vw);
+}

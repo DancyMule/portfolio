@@ -8,11 +8,11 @@ var LanguagesStack = [
 const Languages = () => {
   return (
     <>
-        <p className='Tittle'>Idiomas</p>
+        <p id="languages" className='StackTittle'>Idiomas</p>
         <div className="Container">
             {LanguagesStack.map((element, index) =>(
                 <div key={index} className="ImageContainer">
-                <img className='ImgSizer' src={element[1]} alt={element[0]} />
+                <img className='FlagImgSizer' src={element[1]} alt={element[0]} />
                 <p className='CenteredText'>{element[2]}</p>
               </div>
             ))}

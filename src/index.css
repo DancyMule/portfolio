@@ -15,4 +15,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 768px) {
+  :root {
+    line-height: 1.4; /* Ajustamos ligeramente el line-height */
+    font-size: 90%;   /* Reducimos el tamaño de la fuente un poco */
+  }
+}
 
+/* Breakpoint para pantallas pequeñas */
+@media (max-width: 480px) {
+  :root {
+    line-height: 1.3; /* Aún más compacto en pantallas pequeñas */
+    font-size: 85%;   /* Reducimos aún más el tamaño de la fuente */
+  }
+}

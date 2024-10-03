@@ -11,42 +11,328 @@
     display: block;
 }
 
-.Tittle {
-    font-size: 4rem;
-    font-weight: 500;
-    margin: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .ExperienceContainer {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 15rem;
     background-color: rgb(55, 51, 57);
-    margin: 1rem 0; /* Espaciado entre experiencias */
-    padding: 1rem; /* Espaciado interno */
+    border-radius: 30px;
+    margin: 1rem 0;
+    padding: 1rem;
+    position: relative; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.ExperienceContainer:hover{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+    transform: scale(1.05); 
 }
 
 .ExperienceDetails {
-    flex: 1; /* Ocupa el espacio restante */
-    padding-right: 1rem; /* Espacio entre texto e imagen */
-    color: #fff; /* Cambia el color según tus preferencias */
+    flex: 1;
+    position: relative; 
+    color: #fff;
 }
 
-.ExperienceDetails h3 {
-    margin: 0.5rem 0;
-    font-size: 1.5rem; /* Ajusta según tu diseño */
+
+.ExperienceRol {
+    font-size: 1.5rem;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin: 0; 
 }
 
-.ExperienceDetails h4 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem; /* Ajusta según tu diseño */
+.ExperienceType {
+    position: absolute; 
+    top: -10%; 
+    right: 0;
+    padding: 2px; 
+    margin-right: 2%; 
+    font-size: 1rem; 
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 30px;
+    margin-bottom: 50%;
+}
+
+.ExperienceDescription{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ExperienceCompany{
+    text-align: center;
+}
+
+.ExperienceDetails h4, .ExperienceDetails h2 {
+    margin-top: 5%; 
 }
 
 .ExperienceImage {
-    width: 25%; /* Ajusta el tamaño según tu diseño */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 20rem;
+    height: auto;
+    align-self: flex-start; 
+    margin: auto;
+}
+
+.TimeContainer {
+    display: flex;
+    align-items: center;
+    position: absolute; 
+    bottom:2%; 
+    left: 0; 
+    margin: 0;
+    padding: 0; 
+}
+
+.ImgIcon {
+    width: 2%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.TimeText {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.ExperienceBorderLine {
+    margin-top: 4.5rem;
+    width: 90vw; 
+    border-color: #c6c6c6;
+    margin-left: calc(-12vw);
+}
+
+@media (max-width: 1700px){
+    .ExperienceBorderLine {
+        width: 90vw; 
+        margin-left: calc(-9%);
+    }
+}
+
+@media (max-width: 1650px){
+    .ExperienceBorderLine {
+        width: 90vw; 
+        margin-left: calc(-6vw);
+    }
+}
+
+@media (max-width: 1600px){
+    .ExperienceBorderLine {
+        width: 85vw; 
+        margin-left: calc(0vw);
+    }
+}
+
+@media (max-width: 1480px){
+    .ExperienceBorderLine {
+        width: 90vw; 
+    }
+}
+
+@media (max-width: 900px){
+    .ExperienceBorderLine {
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width: 1300px){
+    .ExperienceContainer {
+        min-height: 15rem;
+    }
+
+    .ExperienceImage {
+        width: 16rem;
+    }
+    
+    .ExperienceRol {
+        font-size: 1.2rem;
+    }
+    
+    .ExperienceType {
+        font-size: 1rem; 
+    }
+    
+    .ExperienceCompany{
+        font-size: 1.3rem;
+    }
+
+    .ExperienceDescription{
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 1020px){
+    .ExperienceContainer {
+        min-height: 18rem;
+    }
+
+    .ExperienceImage {
+        width: 16rem;
+    }
+    
+    .ExperienceRol {
+        font-size: 1rem;
+    }
+    
+    .ExperienceType {
+        font-size: .8rem; 
+        top: 1%
+    }
+    
+    .ExperienceCompany{
+        font-size: 1.3rem;
+        padding-top: 4%;
+    }
+
+    .ExperienceDescription{
+        font-size: 1.1rem;
+    }
+
+    .ImgIcon {
+        width: 3%;
+        margin-left: 2%;
+    }
+}
+
+@media(max-width: 900px){
+    .ExperienceContainer {
+        min-height: 26rem;
+    }
+
+    .ExperienceImage {
+        width: 16rem;
+    }
+    
+    .ExperienceRol {
+        font-size: 1rem;
+    }
+    
+    .ExperienceType {
+        font-size: .8rem; 
+        top: 5%;
+    }
+    
+    .ExperienceCompany{
+        font-size: 1.4rem;
+        padding-top: 8%;
+    }
+
+    .ExperienceDescription{
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 750px){
+    .ExperienceContainer {
+        min-height: 30rem;
+    }
+
+    .ExperienceImage {
+        width: 16rem;
+    }
+    
+    .ExperienceRol {
+        font-size: 1rem;
+    }
+    
+    .ExperienceType {
+        font-size: .8rem; 
+    }
+    
+    .ExperienceCompany{
+        font-size: 1.1rem;
+        padding-top: 5%;
+    }
+
+    .ExperienceDescription{
+        font-size: 1rem;
+    }
+
+    .ImgIcon {
+        width: 4%;
+    }
+    
+    .TimeText {
+        font-size: 1rem;
+        margin: 0;
+        margin-left: 1%;
+    }
+}
+
+@media (max-width: 650px) {
+    .ContainerExp {
+        align-items: center;
+    }
+
+    .ExperienceContainer {
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem auto;
+        width: 90%;
+        min-height: 20rem;
+    }
+
+    .ExperienceRow {
+        display: flex;
+        justify-content: space-between; /* Alinea Rol y Tipo en extremos */
+        margin-bottom: 2rem; /* Espacio entre las líneas */
+    }
+
+    .ExperienceRol {
+        padding-top: 2%;
+        padding-left: 4%;
+        max-width: 12rem;
+    }
+
+    .ExperienceType {
+        font-size: .9rem; 
+        margin: 0;
+        margin-top: 2%;
+        right: 3%;
+        top: 0;
+    }
+
+    .ExperienceDescription {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .ExperienceCompany{
+        font-size: 1.5rem;
+        padding-top: 0;
+        margin-top: 4%;
+    }
+
+    .ExperienceImage {
+        width: 100%; 
+        max-width: 300px; 
+    }
+
+    .TimeContainer {
+        display: flex;
+        align-items: center;
+        margin-top: auto; /* Empuja este elemento al final */
+    }
+
+    .ImgIcon {
+        width: 6%;
+        margin-left: 4%;
+    }
+
+    .TimeText {
+        font-size: 1.3rem;
+        margin-left: 2%;
+    }
 }

@@ -24,7 +24,7 @@ const CloudStack = () => {
   
     return (
       <>
-        <p className='StackTittle'>Nube y servicios</p>
+        <p id="cloudStack" className='StackTittle'>Nube y servicios</p>
         <Slider {...settings}>
           {RealStack.map((element, index) => (
             <div key={index} className='SpacerContainer'>

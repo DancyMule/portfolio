@@ -28,7 +28,7 @@ const FrameworksStack = () => {
   
     return (
       <>
-        <p className='StackTittle'>Frameworks y librerías</p>
+        <p id="frameworksStack" className='StackTittle'>Frameworks y librerías</p>
         <Slider {...settings}>
           {RealStack.map((element, index) => (
             <div key={index} className='SpacerContainer'>

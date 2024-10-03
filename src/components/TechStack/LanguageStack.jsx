@@ -2,6 +2,7 @@ import './GlobalStack.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { useState, useEffect } from 'react';
 
 
 var RealStack = [
@@ -16,12 +17,37 @@ var RealStack = [
     ["Swift", "https://www.programacion.com.py/wp-content/uploads/2017/08/Swift_logo.svg_.png", 10],
 ];
 
+
 const LanguageStack = () => {
+
+  const [slidesToShow, setSlidesToShow] = useState(5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setSlidesToShow(4);
+      } else {
+        setSlidesToShow(5);
+      }
+    };
+
+    // Añadir el evento de resize al cargar el componente
+    window.addEventListener('resize', handleResize);
+    // Ejecutar una vez para establecer el valor inicial
+    handleResize();
+
+    // Limpiar el evento al desmontar
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   var settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 5,
+      slidesToShow: slidesToShow,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
@@ -32,7 +58,7 @@ const LanguageStack = () => {
 
   return (
     <>
-      <p className='StackTittle'>Lenguajes de programación</p>
+      <p id="languagesStack" className='StackTittle'>Lenguajes de programación</p>
       <Slider {...settings}>
         {RealStack.map((element, index) => (
           <div key={index} className='SpacerContainer'>

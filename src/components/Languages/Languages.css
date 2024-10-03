@@ -5,14 +5,6 @@
     margin: auto;
 }
 
-.Tittle{
-    font-size: 4rem;
-    font-weight: 500;
-    margin: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .ImageContainer {
     position: relative;
     width: 12rem;
@@ -23,7 +15,7 @@
     justify-content: center;  
   }
 
-.ImgSizer {
+.FlagImgSizer {
     position: absolute;
     width: 12rem;
     height: auto;
@@ -34,7 +26,7 @@
     z-index: 1;
 }
 
-.ImgSizer:hover {
+.FlagImgSizer:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
     transform: scale(1.05); 
     z-index: 1;
@@ -62,4 +54,34 @@
     font-size: 7.5rem; 
     transition: color 0.6s ease, transform 0.6s ease; 
     padding-bottom: 8%;
+}
+
+@media(max-width: 650px){
+    .ImageContainer {
+        position: relative;
+        width: 9rem;
+        height: 12rem;
+        margin: 0;
+
+      }
+
+    .FlagImgSizer {
+        width: 7rem;
+        height: auto;
+        margin: 0;
+    }    
+
+    .ImageContainer .CenteredText {
+        color: rgba(0, 0, 0, 0);  
+        font-size: 5rem; 
+        transition: color 0.6s ease, transform 0.6s ease; 
+        padding-bottom: 8%;
+    }
+
+    .ImageContainer:hover .CenteredText {
+        font-size: 5rem;
+        color: rgba(0, 0, 0, 0.8);  
+        padding-bottom: 8%;
+    }
+
 }

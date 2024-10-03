@@ -27,7 +27,7 @@ const DatabaseStack = () => {
 
   return (
     <>
-      <p className='StackTittle'>Bases de datos</p>
+      <p id="databasesStack" className='StackTittle'>Bases de datos</p>
       <Slider {...settings}>
         {RealStack.map((element, index) => (
           <div key={index} className='SpacerContainer'>

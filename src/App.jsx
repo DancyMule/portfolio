@@ -6,7 +6,8 @@ import FrameworksStack from './components/TechStack/FrameworksStack'
 import LanguageStack from './components/TechStack/LanguageStack'
 import Languages from './components/Languages/Languages'
 import Header from './components/Header/header'
-import Experience from './components/Experience/experience'
+import Experience from './components/Experience/Experience'
+import Goals from './components/Goals/Goals'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
       <CloudStack/>
       <Languages/>
       <Experience/>
+      <Goals/>
+      
     </>
   )
 }

@@ -1,44 +1,84 @@
-.Container{
+.ContainerTopBar{
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
     margin: auto;
 }
 
-.ImageContainer {
+.ImageContainerTopBar {
     position: relative;
-    width: 12rem;
-    height: 12rem;
-    margin: 1rem;
+    width: 1.4rem;
+    height: 1rem;
+    margin: .7rem;
+    margin-right: 1.2rem;
     display: flex;           
     align-items: center;      
     justify-content: center;  
   }
 
-.FlagImgSizer {
+.FlagImgSizerTopBar {
     position: absolute;
-    width: 12rem;
+    width: 2.5rem;
     height: auto;
     margin: 1rem;
-    border: 5px solid rgb(55,51,57); 
+    border: 3px solid rgb(83, 77, 85); 
     border-radius: 100%;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     z-index: 1;
 }
 
-.FlagImgSizer:hover {
+@media(max-width: 1650px){
+    .FlagImgSizerTopBar{
+        width: 2.3rem;
+    }
+    .ImageContainerTopBar{
+        margin: .9rem;
+    }
+
+    .ImageContainerTopBar {
+
+    }
+}
+
+@media(max-width: 1400px){
+    .FlagImgSizerTopBar{
+        width: 2.1rem;
+    }
+    
+    .ImageContainerTopBar{
+        margin: .8rem;
+    }
+
+    .ImageContainerTopBar {
+        margin-right: .8rem;
+    }
+}
+
+@media(max-width: 1280px){
+    .FlagImgSizerTopBar{
+        width: 1.5rem;
+    }
+
+    .ImageContainerTopBar{
+        margin: .1rem;
+    }
+
+    .ImageContainerTopBar {
+        margin-right: .45rem;
+    }
+}
+
+.FlagImgSizerTopBar:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
-    transform: scale(1.05); 
     z-index: 1;
 }
 
-.FlagSelected {
+.FlagSelectedTopBar {
     box-shadow: 0 0 20px rgba(32, 218, 224, 0.8); 
-    transform: scale(1.05); 
     z-index: 1;
 }
 
-.CenteredText {
+.CenteredTextTopBar {
     position: absolute;
     font-size: 7.5rem;
     font-weight: bold;
@@ -49,13 +89,13 @@
     padding-bottom: 8%;
   }
 
-  .ImageContainer:hover .CenteredText {
+  .ImageContainerTopBar:hover .CenteredTextTopBar {
     font-size: 7.5rem;
     color: rgba(0, 0, 0, 0.8);  
     padding-bottom: 8%;
 }
 
-.ImageContainer .CenteredText {
+.ImageContainerTopBar .CenteredTextTopBar {
     color: rgba(0, 0, 0, 0);  
     font-size: 7.5rem; 
     transition: color 0.6s ease, transform 0.6s ease; 
@@ -63,7 +103,7 @@
 }
 
 @media(max-width: 650px){
-    .ImageContainer {
+    .ImageContainerTopBar {
         position: relative;
         width: 9rem;
         height: 12rem;
@@ -71,20 +111,20 @@
 
       }
 
-    .FlagImgSizer {
+    .FlagImgSizerTopBar {
         width: 7rem;
         height: auto;
         margin: 0;
     }    
 
-    .ImageContainer .CenteredText {
+    .ImageContainerTopBar .CenteredTextTopBar {
         color: rgba(0, 0, 0, 0);  
         font-size: 5rem; 
         transition: color 0.6s ease, transform 0.6s ease; 
         padding-bottom: 8%;
     }
 
-    .ImageContainer:hover .CenteredText {
+    .ImageContainerTopBar:hover .CenteredTextTopBar {
         font-size: 5rem;
         color: rgba(0, 0, 0, 0.8);  
         padding-bottom: 8%;

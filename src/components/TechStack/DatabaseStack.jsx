@@ -2,6 +2,7 @@ import './GlobalStack.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { useLanguage } from '../LanguageContext/LanguageContext';
 
 var RealStack = [
     ["MySQL", "https://cdn.icon-icons.com/icons2/2699/PNG/512/mysql_logo_icon_169940.png", 85],
@@ -11,7 +12,21 @@ var RealStack = [
     ["Firestore", "https://img.icons8.com/?size=160&id=9AHxUOg7E9q2&format=png", 85]
 ];
 
+const content = {
+  es:{
+      tittle: "Bases de datos"
+  },
+  en:{
+      tittle: "Databases"
+  },
+  de:{
+      tittle: "Datenbanken"
+  },
+}
+
 const DatabaseStack = () => {
+  const {language} = useLanguage()
+
   var settings = {
       dots: false,
       infinite: true,
@@ -27,7 +42,7 @@ const DatabaseStack = () => {
 
   return (
     <>
-      <p id="databasesStack" className='StackTittle'>Bases de datos</p>
+      <p id="databasesStack" className='StackTittle'>{content[language].tittle}</p>
       <Slider {...settings}>
         {RealStack.map((element, index) => (
           <div key={index} className='SpacerContainer'>

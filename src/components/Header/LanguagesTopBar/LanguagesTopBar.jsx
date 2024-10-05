@@ -1,23 +1,11 @@
-import './Languages.css';
-import { useLanguage } from '../LanguageContext/LanguageContext'; // Importa el contexto
+import './LanguagesTopBar.css';
+import { useLanguage } from '../../LanguageContext/LanguageContext'; // Importa el contexto
 
 var LanguagesStack = [
     ['Español', 'https://hatscripts.github.io/circle-flags/flags/mx.svg', 'C2', 'ES'],
     ['Inglés', 'https://hatscripts.github.io/circle-flags/flags/us.svg', 'B2', 'EN'],
     ['Alemán', 'https://hatscripts.github.io/circle-flags/flags/de.svg', 'A2', 'DE'],
 ];
-
-const content = {
-  es:{
-    tittle: "Idiomas",
-  },
-  en:{
-    tittle: "Languages",
-  },
-  de:{
-    tittle: "Sprachen",
-  },
-}
 
 const Languages = () => {
   const { changeLanguage, language } = useLanguage(); // Accede a la función para cambiar el idioma
@@ -31,12 +19,11 @@ const Languages = () => {
   return (
     <>
     
-      <p id="languages" className='StackTittle'>{content[language].tittle}</p>
-      <div className="Container">
+
+      <div className="ContainerTopBar">
         {LanguagesStack.map((element, index) => (
-          <div key={index} className="ImageContainer" onClick={() => handleLanguageChange(element[3].toLowerCase())}> {/* Cambia el idioma al hacer clic */}
-            <img className={`FlagImgSizer ${language == element[3].toLowerCase() ? 'FlagSelected' : ''}`} src={element[1]} alt={element[0]}/>
-            <p className='CenteredText'>{element[2]}</p>    
+          <div key={index} className="ImageContainerTopBar" onClick={() => handleLanguageChange(element[3].toLowerCase())}> {/* Cambia el idioma al hacer clic */}
+            <img className={`FlagImgSizerTopBar ${language == element[3].toLowerCase() ? 'FlagSelectedTopBar' : ''}`} src={element[1]} alt={element[0]}/>
           </div>
         ))}
       </div> 

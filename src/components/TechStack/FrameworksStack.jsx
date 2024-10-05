@@ -2,6 +2,7 @@ import './GlobalStack.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { useLanguage } from '../LanguageContext/LanguageContext';
 
 var RealStack = [
     ["Laravel", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png", 60],
@@ -12,7 +13,21 @@ var RealStack = [
     ["Jetpack Compose", "https://mohammedakram.com/public/images/understanding-compose/jetpack-compose-icon.png", 85]
 ];
 
+const content = {
+  es:{
+    tittle: "Frameworks y librerías"
+  },
+  en:{
+    tittle: "Frameworks & libraries"
+  },
+  de:{
+    tittle: "Frameworks und Bibliotheken"
+  },
+}
+
 const FrameworksStack = () => {
+    const {language} = useLanguage();
+
     var settings = {
         dots: false,
         infinite: true,
@@ -28,7 +43,7 @@ const FrameworksStack = () => {
   
     return (
       <>
-        <p id="frameworksStack" className='StackTittle'>Frameworks y librerías</p>
+        <p id="frameworksStack" className='StackTittle'>{content[language].tittle}</p>
         <Slider {...settings}>
           {RealStack.map((element, index) => (
             <div key={index} className='SpacerContainer'>

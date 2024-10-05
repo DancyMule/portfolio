@@ -2,13 +2,29 @@ import './GlobalStack.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { useLanguage } from '../LanguageContext/LanguageContext';
 
 var RealStack = [
     ["AWS", "https://inferencelabs9.com/wp-content/uploads/2024/01/AWS2-1.png", 15],
     ["Firebase", "https://brandeps.com/logo-download/F/Firebase-logo-02.png", 65],
 ];
 
+const content = {
+  es:{
+    tittle: 'Nube y servicios'
+  },
+  en:{
+    tittle: 'Cloud & services'
+  },
+  de:{
+    tittle: 'Cloud-Dienste'
+  }
+}
+
 const CloudStack = () => {
+
+  const {language} = useLanguage()
+
     var settings = {
         dots: false,
         infinite: true,
@@ -24,7 +40,7 @@ const CloudStack = () => {
   
     return (
       <>
-        <p id="cloudStack" className='StackTittle'>Nube y servicios</p>
+        <p id="cloudStack" className='StackTittle'>{content[language].tittle}</p>
         <Slider {...settings}>
           {RealStack.map((element, index) => (
             <div key={index} className='SpacerContainer'>

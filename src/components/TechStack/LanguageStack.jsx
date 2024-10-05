@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../LanguageContext/LanguageContext';
 
 
 var RealStack = [
@@ -17,9 +18,21 @@ var RealStack = [
     ["Swift", "https://www.programacion.com.py/wp-content/uploads/2017/08/Swift_logo.svg_.png", 10],
 ];
 
+const content = {
+  es: {
+    tittle: "Lenguajes de programación"
+  },
+  en: {
+    tittle: "Programming languages"
+  },
+  de: {
+    tittle: "Programmiersprachen"
+  },
+}
 
 const LanguageStack = () => {
 
+  const {language} = useLanguage()
   const [slidesToShow, setSlidesToShow] = useState(5);
 
   useEffect(() => {
@@ -58,7 +71,12 @@ const LanguageStack = () => {
 
   return (
     <>
-      <p id="languagesStack" className='StackTittle'>Lenguajes de programación</p>
+      <p 
+        id="languagesStack" 
+        className={language == 'de' ? 'StackTittleDe' : 'StackTittle'}
+      >
+        {content[language].tittle}
+      </p>
       <Slider {...settings}>
         {RealStack.map((element, index) => (
           <div key={index} className='SpacerContainer'>

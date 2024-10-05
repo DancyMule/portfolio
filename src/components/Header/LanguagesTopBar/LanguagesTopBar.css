@@ -102,17 +102,17 @@
     padding-bottom: 8%;
 }
 
-@media(max-width: 650px){
+@media(max-width: 950px){
     .ImageContainerTopBar {
         position: relative;
-        width: 9rem;
-        height: 12rem;
+        width: 4rem;
+        height: 4rem;
         margin: 0;
 
       }
 
     .FlagImgSizerTopBar {
-        width: 7rem;
+        width: 3rem;
         height: auto;
         margin: 0;
     }    

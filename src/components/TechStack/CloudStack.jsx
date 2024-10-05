@@ -10,13 +10,13 @@ var RealStack = [
 
 const CloudStack = () => {
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         centerMode: true,
         centerPadding: '10px', 
         focusOnSelect: true

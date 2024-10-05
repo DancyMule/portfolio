@@ -8,12 +8,14 @@ import Languages from './components/Languages/Languages'
 import Header from './components/Header/header'
 import Experience from './components/Experience/Experience'
 import Goals from './components/Goals/Goals'
+import ContactBar from './components/ContactBar/ContactBar'
 
 function App() {
 
   return (
     <>
       <Header/>
+      <ContactBar/>
       <AboutMe/>
       <LanguageStack/>
       <FrameworksStack/>    
@@ -21,8 +23,7 @@ function App() {
       <CloudStack/>
       <Languages/>
       <Experience/>
-      <Goals/>
-      
+      <Goals/>  
     </>
   )
 }

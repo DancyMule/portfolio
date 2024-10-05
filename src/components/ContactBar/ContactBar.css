@@ -1,0 +1,90 @@
+.contact-bar {
+    align-items: center;
+    position: fixed; /* Fija la barra en su posición */
+    top: 50%; /* Centra verticalmente */
+    right: -200px; /* Fuera de vista inicialmente */
+    transform: translateY(-50%); /* Ajusta para centrar correctamente */
+    display: flex;
+    flex-direction: column; /* Alinea los íconos en columna */
+    background-color: #383838; /* Fondo gris oscuro */
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    z-index: 9999; /* Por encima de todo */
+    transition: right 0.1s ease; /* Transición suave */
+}
+
+.contact-bar.open {
+    right: 0; /* Alineada con el borde derecho cuando está abierta */
+}
+
+.contact-bar.closed {
+    right: -200px; /* Fuera de vista cuando está cerrada */
+}
+
+.contact-bar.visible {
+    right: 0; /* Siempre visible cuando el ancho es mayor a 950px */
+}
+
+.contact-bar a {
+    margin: 10px 0; /* Espacio entre los íconos */
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem; /* Tamaño de los íconos */
+    transition: color 0.5s ease, transform 0.3s ease; /* Animación de cambio de color */
+}
+
+.contact-bar a:hover {
+    transform: scale(1.2); /* Efecto de zoom al hacer hover */
+}
+
+
+/* Colores específicos para el hover de cada ícono */
+.whatsapp:hover {
+    color: #25D366; /* Verde para WhatsApp */
+}
+
+.facebook:hover {
+    color: #0965fc; /* Azul para Facebook */
+}
+
+.github:hover {
+    color: #f3d912; /* Amarillo para GitHub */
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #FDC830, #f335a4); /* Gradiente clásico de Instagram */
+    -webkit-background-clip: text; /* Clip de fondo para el texto */
+    -webkit-text-fill-color: transparent; /* Relleno de texto transparente */
+}
+
+.linkedin:hover {
+    color: rgb(10,102,194); /* Azul para LinkedIn */
+}
+
+.download:hover {
+    color: #FF0000; /* Rojo para Descargar */
+}
+
+.contact-bar i {
+    display: block; /* Asegura que los íconos estén alineados */
+}
+.contact-bar i {
+    display: block; /* Asegura que los íconos estén alineados */
+}
+
+.toggle-button {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #383838; 
+    color: #fff;
+    border: none;
+    border-radius: 10px 0 0 10px;;
+    width: 30px; /* Ajusta el tamaño del botón */
+    height: 40px;
+    cursor: pointer;
+    transition: right 0.1s ease;
+    z-index: 10000;
+}

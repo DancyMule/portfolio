@@ -13,7 +13,7 @@ import { LanguageProvider } from './components/LanguageContext/LanguageContext.j
 
 function App() {
   return (
-    <LanguageProvider> {/* Envuelve todos tus componentes aquí */}
+    <LanguageProvider> 
         <Header />
         <ContactBar />
         <AboutMe />
@@ -21,7 +21,7 @@ function App() {
         <FrameworksStack />
         <DatabaseStack />
         <CloudStack />
-        <Languages /> {/* Componente para cambiar el idioma */}
+        <Languages />
         <Experience />
         <Goals />
     </LanguageProvider>

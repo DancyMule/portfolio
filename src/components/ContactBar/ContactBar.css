@@ -1,76 +1,76 @@
 .contact-bar {
     align-items: center;
-    position: fixed; /* Fija la barra en su posición */
-    top: 50%; /* Centra verticalmente */
-    right: -200px; /* Fuera de vista inicialmente */
-    transform: translateY(-50%); /* Ajusta para centrar correctamente */
+    position: fixed; 
+    top: 50%; 
+    right: -200px; 
+    transform: translateY(-50%); 
     display: flex;
-    flex-direction: column; /* Alinea los íconos en columna */
-    background-color: #383838; /* Fondo gris oscuro */
+    flex-direction: column; 
+    background-color: #383838; 
     padding: 10px;
     border-radius: 10px 0 0 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
-    z-index: 9999; /* Por encima de todo */
-    transition: right 0.1s ease; /* Transición suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 9999; 
+    transition: right 0.1s ease; 
 }
 
 .contact-bar.open {
-    right: 0; /* Alineada con el borde derecho cuando está abierta */
+    right: 0; 
 }
 
 .contact-bar.closed {
-    right: -200px; /* Fuera de vista cuando está cerrada */
+    right: -200px; 
 }
 
 .contact-bar.visible {
-    right: 0; /* Siempre visible cuando el ancho es mayor a 950px */
+    right: 0; 
 }
 
 .contact-bar a {
-    margin: 10px 0; /* Espacio entre los íconos */
+    margin: 10px 0; 
     color: #fff;
     text-decoration: none;
-    font-size: 2rem; /* Tamaño de los íconos */
-    transition: color 0.5s ease, transform 0.3s ease; /* Animación de cambio de color */
+    font-size: 2rem; 
+    transition: color 0.5s ease, transform 0.3s ease;
 }
 
 .contact-bar a:hover {
-    transform: scale(1.2); /* Efecto de zoom al hacer hover */
+    transform: scale(1.2); 
 }
 
 
-/* Colores específicos para el hover de cada ícono */
+
 .whatsapp:hover {
-    color: #25D366; /* Verde para WhatsApp */
+    color: #25D366; 
 }
 
 .facebook:hover {
-    color: #0965fc; /* Azul para Facebook */
+    color: #0965fc;
 }
 
 .github:hover {
-    color: #f3d912; /* Amarillo para GitHub */
+    color: #f3d912; 
 }
 
 .instagram:hover {
-    background: linear-gradient(45deg, #FDC830, #f335a4); /* Gradiente clásico de Instagram */
-    -webkit-background-clip: text; /* Clip de fondo para el texto */
-    -webkit-text-fill-color: transparent; /* Relleno de texto transparente */
+    background: linear-gradient(45deg, #FDC830, #f335a4); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
 }
 
 .linkedin:hover {
-    color: rgb(10,102,194); /* Azul para LinkedIn */
+    color: rgb(10,102,194); 
 }
 
 .download:hover {
-    color: #FF0000; /* Rojo para Descargar */
+    color: #FF0000; 
 }
 
 .contact-bar i {
-    display: block; /* Asegura que los íconos estén alineados */
+    display: block; 
 }
 .contact-bar i {
-    display: block; /* Asegura que los íconos estén alineados */
+    display: block; 
 }
 
 .toggle-button {
@@ -82,7 +82,7 @@
     color: #fff;
     border: none;
     border-radius: 10px 0 0 10px;;
-    width: 30px; /* Ajusta el tamaño del botón */
+    width: 30px; 
     height: 40px;
     cursor: pointer;
     transition: right 0.1s ease;

@@ -104,23 +104,21 @@
     }
 
     .navbar-links.active ul {
-        max-height: 500px; /* Ajusta este valor según el tamaño del contenido */
+        max-height: 500px; 
         transform: translateY(0);
         opacity: 1;
         transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease
     }
 
-     /* Aplicamos una transición suave a los elementos hijos (li y a) */
      .navbar-links li {
         margin: 1rem 0;
         opacity: 0;
         transition: opacity 0.1s ease-in-out;
     }
 
-    /* Cuando está activo, los elementos hijos aparecen con un pequeño retraso */
     .navbar-links.active li {
         opacity: 1;
-        transition-delay: 0.3s; /* Retraso para hacer que el contenido sea visible suavemente */
+        transition-delay: 0.3s; 
     }
 
 

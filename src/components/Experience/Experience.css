@@ -284,8 +284,8 @@
 
     .ExperienceRow {
         display: flex;
-        justify-content: space-between; /* Alinea Rol y Tipo en extremos */
-        margin-bottom: 2rem; /* Espacio entre las líneas */
+        justify-content: space-between; 
+        margin-bottom: 2rem; 
     }
 
     .ExperienceRol {
@@ -323,7 +323,7 @@
     .TimeContainer {
         display: flex;
         align-items: center;
-        margin-top: auto; /* Empuja este elemento al final */
+        margin-top: auto; 
     }
 
     .ImgIcon {

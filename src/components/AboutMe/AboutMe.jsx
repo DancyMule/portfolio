@@ -2,9 +2,8 @@ import "./AboutMe.css";
 import { useLanguage } from '../LanguageContext/LanguageContext';
 
 const AboutMe = () => {
-  const { language } = useLanguage(); // Accede al idioma actual
+  const { language } = useLanguage(); 
 
-  // Objeto de traducción
   const content = {
     es: {
       hello: "Hola, soy",

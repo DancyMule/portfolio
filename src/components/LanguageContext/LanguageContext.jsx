@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from 'react';
-import PropTypes from 'prop-types'; // Importa PropTypes
+import PropTypes from 'prop-types'; 
 
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('es'); // Idioma por defecto
+  const [language, setLanguage] = useState('es'); 
 
   const changeLanguage = (lang) => {
     setLanguage(lang);
@@ -13,14 +13,13 @@ export const LanguageProvider = ({ children }) => {
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage }}>
-      {children}  {/* Aquí se renderizan los componentes hijos */}
+      {children}  
     </LanguageContext.Provider>
   );
 };
 
-// Define la validación de propTypes
 LanguageProvider.propTypes = {
-  children: PropTypes.node.isRequired, // children debe ser un nodo React y es requerido
+  children: PropTypes.node.isRequired, 
 };
 
 export const useLanguage = () => useContext(LanguageContext);

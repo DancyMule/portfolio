@@ -241,15 +241,13 @@ const content = {
       };
   
       window.addEventListener('resize', handleResize);
-      handleResize(); // Ejecuta la función al inicio
+      handleResize(); 
       return () => {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
   
-    // Escucha cambios en el idioma
     useEffect(() => {
-      // Re-renderiza al cambiar el idioma
       if (window.innerWidth >= 950) {
         setLayoutToShow(<LayoutA />);
       } else if (window.innerWidth >= 650) {
@@ -257,7 +255,7 @@ const content = {
       } else {
         setLayoutToShow(<LayoutC />);
       }
-    }, [language]); // Dependencia en el idioma
+    }, [language]);
   
     return (
       <>

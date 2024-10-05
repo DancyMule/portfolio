@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Asegúrate de tener FontAwesome importado
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import './ContactBar.css'
 
 const ContactBar = () => {
-    const [isOpen, setIsOpen] = useState(false); // Estado para controlar la visibilidad de la barra
-    const [isMobile, setIsMobile] = useState(false); // Estado para controlar si está en mobile
+    const [isOpen, setIsOpen] = useState(false); 
+    const [isMobile, setIsMobile] = useState(false); 
 
     const toggleBar = () => {
-        setIsOpen(!isOpen); // Alterna el estado de isOpen
+        setIsOpen(!isOpen);
     };
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 950); // Cambia el estado isMobile según el ancho de la ventana
+            setIsMobile(window.innerWidth <= 950); 
         };
 
-        window.addEventListener('resize', handleResize); // Escucha los cambios de tamaño
-        handleResize(); // Llama a la función al cargar el componente para establecer el estado inicial
+        window.addEventListener('resize', handleResize); 
+        handleResize(); 
 
         return () => {
-            window.removeEventListener('resize', handleResize); // Limpia el event listener al desmontar
+            window.removeEventListener('resize', handleResize); 
         };
     }, []);
 
@@ -30,7 +30,7 @@ const ContactBar = () => {
                     onClick={toggleBar} 
                     className="toggle-button" 
                     style={{
-                        right: isOpen ? '3rem' : '-1px', // Ajusta la posición del botón según si está abierto
+                        right: isOpen ? '3rem' : '-1px', 
                     }}
                 >
                     <i className={`fas fa-chevron-${isOpen ? 'left' : 'right'}`}></i>

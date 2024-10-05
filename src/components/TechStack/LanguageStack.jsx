@@ -44,12 +44,9 @@ const LanguageStack = () => {
       }
     };
 
-    // Añadir el evento de resize al cargar el componente
     window.addEventListener('resize', handleResize);
-    // Ejecutar una vez para establecer el valor inicial
     handleResize();
 
-    // Limpiar el evento al desmontar
     return () => {
       window.removeEventListener('resize', handleResize);
     };
